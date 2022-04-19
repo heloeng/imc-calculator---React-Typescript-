@@ -1,21 +1,16 @@
-//css módules
+
 import { useState } from 'react';
 import styles from '../../App.module.css'
 
-
-//importa para conseguir usar a imagem
 import poweredImage from '../../assests/powered.png';
 export const Home = () => {
-
-    //"<number>" tipar
     const [heightField, setHeightField] = useState<number>(0);
     const [weightField, setWeightField] = useState<number>(0);
+    const handleCalculateButton = () => {
+        if (heightField && weightField) {
 
-    const handleCalculateButton = () =>{
-        if(heightField && weightField){
 
-
-        }else {
+        } else {
             alert("Digite todos os campos");
         }
     }
@@ -38,22 +33,8 @@ export const Home = () => {
                         type="number"
                         placeholder='Digite a sua altura. Ex: 1.5 (em metros)'
                         value={heightField > 0 ? heightField : ''}
-
-                        //    value será sempre uma string, mesmo digitando um número,
-                        //     /entao deve transformar o valor digitado em número
-                        //     função que altera o estado: setHeighField
-                        //     a função vai receber um evento. Esse evento é quando altera o input
-                        //     ele vai enviar pra gente esse evento . Esse evento está relacionado com o próprio input.
-                        //     vai chamar o setHeighField que é o método que criou la em cima, esse estado.
-                        //     e passa o "event.target.value" = 
-                        //     "event"  o event esta relaciona com o proprio campo que ele mudou: "value={name}" então,
-                        //     irá pegar o próprio campo: "value={name}"
-                        //     entao o event, pega o 'target' que é o elemento,  que é o input
-                        //     e o value desse input, e setando dentro  do "heighField"
                         onChange={e => setHeightField(parseFloat(e.target.value))}
                     />
-
-
 
                     <input
                         type="number"
@@ -62,23 +43,13 @@ export const Home = () => {
                         onChange={e => setWeightField(parseFloat(e.target.value))}
                     />
 
-
-
-<button onClick={handleCalculateButton}>Calcular</button>
-
+                    <button onClick={handleCalculateButton}>Calcular</button>
 
                 </div>
-
                 <div className={styles.rightSide}>
-                 
                 </div>
             </div>
-
-
-
-
         </div>
-
     );
 
 }
