@@ -1,0 +1,97 @@
+
+
+* {box-sizing: border-box;}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.headerContainer{
+  /* //limite de largura */
+max-width: 900px;
+margin: 40px auto;
+/* background-color: #FF0000; */
+
+}
+
+
+.container {
+  /* coloca lado a lado */
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  max-width: 900px;
+  margin: auto;
+
+ /* background-color: #7300ff; */
+}
+
+	/* O flex: 1; é necessário para que cada
+   item se expanda ocupando o tamanho máximo do container. */
+.container .leftSide{
+  flex: 1;
+ 
+  /* background-color: #b7ff00; */
+}
+
+.container .leftSide h1{
+  margin:0;
+font: 40px;
+color: #3a5c45;
+}
+
+
+.container .leftSide p{
+font-size: 16px;
+margin-bottom: 40px;
+color: #796a8b;
+/* background-color: #ff00d9; */
+}
+
+.container .leftSide input{
+width: 100%;
+border: 0;
+border-bottom: 2px solid rgba(150, 163, 171, .5);
+/* em cima/baixo = 10px
+laterais = 2px */
+padding: 10px 2px;
+margin-bottom: 20px;
+font-size: 14;
+/* //outline aparece uma borda 
+quadrada dentro do campo 
+do input / zero remove ele */
+outline: 0;
+} 
+
+.container .leftSide button{
+background-color: #227C9D;
+color: #FFF;
+font-size: 15px;
+border: 0;
+border-radius: 10px;
+padding: 15px 0;
+width: 100%;
+cursor: pointer;
+margin-top: 40px;
+/* tempo de transição da troca do efeito do hover */
+/* //"all" é todas as propriedades 
+que modifica vai ter esse efeito do tempo */
+transition: all ease .8s;
+}
+
+.container .leftSide button:hover{
+opacity: 0.4;
+
+}
+
+	/* O flex: 1; é necessário para que cada item 
+  se expanda ocupando o tamanho máximo do container. */
+.container .rightSide{
+  flex: 1;
+  margin-left: 40px;
+  /* background-color: #ff00d9; */
+}
+
+
+
