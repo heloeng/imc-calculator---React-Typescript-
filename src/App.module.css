@@ -10,20 +10,15 @@ body{
 .headerContainer{
 max-width: 900px;
 margin: 40px auto;
-
 }
 
 
 .container {
-
   display: flex;
-  
   max-width: 900px;
   margin: auto;
 
-
 }
-
 
 .container .leftSide{
   flex: 1;
@@ -41,18 +36,15 @@ color: #3a5c45;
 font-size: 16px;
 margin-bottom: 40px;
 color: #796a8b;
-
 }
 
 .container .leftSide input{
 width: 100%;
 border: 0;
 border-bottom: 2px solid rgba(150, 163, 171, .5);
-
 padding: 10px 2px;
 margin-bottom: 20px;
 font-size: 14;
-
 outline: 0;
 } 
 
@@ -74,11 +66,25 @@ opacity: 0.4;
 
 }
 
+
 .container .rightSide{
   flex: 1;
   margin-left: 40px;
- 
 }
 
 
+.container .rightSide {
+flex: 1;
+margin-left: 40px;
+display: flex;
+}
+
+
+
+.container .rightSide .grid{
+flex: 1;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
 
